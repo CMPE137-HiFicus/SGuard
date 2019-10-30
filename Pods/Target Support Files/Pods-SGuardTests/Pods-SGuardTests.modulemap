@@ -1,0 +1,6 @@
+framework module Pods_SGuardTests {
+  umbrella header "Pods-SGuardTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

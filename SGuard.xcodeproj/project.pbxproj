@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4218AB4BAE9D760BDCA191F0 /* Pods_SGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F35193F5AB9959225A019B /* Pods_SGuard.framework */; };
+		97420E8A23660FF400D57D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420E8923660FF400D57D3E /* AppDelegate.swift */; };
+		97420E8C23660FF400D57D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420E8B23660FF400D57D3E /* SceneDelegate.swift */; };
+		97420E8E23660FF400D57D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420E8D23660FF400D57D3E /* ViewController.swift */; };
+		97420E9123660FF400D57D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97420E8F23660FF400D57D3E /* Main.storyboard */; };
+		97420E9323660FF700D57D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97420E9223660FF700D57D3E /* Assets.xcassets */; };
+		97420E9623660FF700D57D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97420E9423660FF700D57D3E /* LaunchScreen.storyboard */; };
+		97420EA123660FF700D57D3E /* SGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420EA023660FF700D57D3E /* SGuardTests.swift */; };
+		97420EAC23660FF700D57D3E /* SGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420EAB23660FF700D57D3E /* SGuardUITests.swift */; };
+		97420EBC23664A2A00D57D3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */; };
+		97F62E162367752D0086B82B /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F62E152367752D0086B82B /* Register.swift */; };
+		97F62E1823677F270086B82B /* registerSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F62E1723677F270086B82B /* registerSchema.swift */; };
+		E5E92F8298ED3EB8A4F41ABD /* Pods_SGuard_SGuardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041ECE4261678D03BAFE61C1 /* Pods_SGuard_SGuardUITests.framework */; };
+		F7B69127EE750B1E7D9BE0AB /* Pods_SGuardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97420E9D23660FF700D57D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97420E7E23660FF400D57D3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97420E8523660FF400D57D3E;
+			remoteInfo = SGuard;
+		};
+		97420EA823660FF700D57D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97420E7E23660FF400D57D3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97420E8523660FF400D57D3E;
+			remoteInfo = SGuard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041ECE4261678D03BAFE61C1 /* Pods_SGuard_SGuardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGuard_SGuardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06235FC4ABED66490E5463E1 /* Pods-SGuard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard.release.xcconfig"; path = "Target Support Files/Pods-SGuard/Pods-SGuard.release.xcconfig"; sourceTree = "<group>"; };
+		4C9D054CC2DD508BBD9E375F /* Pods-SGuardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuardTests.debug.xcconfig"; path = "Target Support Files/Pods-SGuardTests/Pods-SGuardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67680CDD8810EF30FE4AC50A /* Pods-SGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard.debug.xcconfig"; path = "Target Support Files/Pods-SGuard/Pods-SGuard.debug.xcconfig"; sourceTree = "<group>"; };
+		8D1E809DA12D072842ACFDD8 /* Pods-SGuard-SGuardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard-SGuardUITests.release.xcconfig"; path = "Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		96F35193F5AB9959225A019B /* Pods_SGuard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGuard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97420E8623660FF400D57D3E /* SGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97420E8923660FF400D57D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		97420E8B23660FF400D57D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		97420E8D23660FF400D57D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97420E9023660FF400D57D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97420E9223660FF700D57D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97420E9523660FF700D57D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97420E9723660FF700D57D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97420E9C23660FF700D57D3E /* SGuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97420EA023660FF700D57D3E /* SGuardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGuardTests.swift; sourceTree = "<group>"; };
+		97420EA223660FF700D57D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97420EA723660FF700D57D3E /* SGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97420EAB23660FF700D57D3E /* SGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGuardUITests.swift; sourceTree = "<group>"; };
+		97420EAD23660FF700D57D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97F62E152367752D0086B82B /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		97F62E1723677F270086B82B /* registerSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerSchema.swift; sourceTree = "<group>"; };
+		A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGuardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18EC8958B36A8DD43C593DF /* Pods-SGuard-SGuardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard-SGuardUITests.debug.xcconfig"; path = "Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF9371A3E0923BFBD4D36765 /* Pods-SGuardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuardTests.release.xcconfig"; path = "Target Support Files/Pods-SGuardTests/Pods-SGuardTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97420E8323660FF400D57D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4218AB4BAE9D760BDCA191F0 /* Pods_SGuard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97420E9923660FF700D57D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7B69127EE750B1E7D9BE0AB /* Pods_SGuardTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97420EA423660FF700D57D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E92F8298ED3EB8A4F41ABD /* Pods_SGuard_SGuardUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44E60C40539A340C153189E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67680CDD8810EF30FE4AC50A /* Pods-SGuard.debug.xcconfig */,
+				06235FC4ABED66490E5463E1 /* Pods-SGuard.release.xcconfig */,
+				D18EC8958B36A8DD43C593DF /* Pods-SGuard-SGuardUITests.debug.xcconfig */,
+				8D1E809DA12D072842ACFDD8 /* Pods-SGuard-SGuardUITests.release.xcconfig */,
+				4C9D054CC2DD508BBD9E375F /* Pods-SGuardTests.debug.xcconfig */,
+				FF9371A3E0923BFBD4D36765 /* Pods-SGuardTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		97420E7D23660FF400D57D3E = {
+			isa = PBXGroup;
+			children = (
+				97420E8823660FF400D57D3E /* SGuard */,
+				97420E9F23660FF700D57D3E /* SGuardTests */,
+				97420EAA23660FF700D57D3E /* SGuardUITests */,
+				97420E8723660FF400D57D3E /* Products */,
+				44E60C40539A340C153189E2 /* Pods */,
+				ED96486CBC484FEDE8C1EBE9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		97420E8723660FF400D57D3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97420E8623660FF400D57D3E /* SGuard.app */,
+				97420E9C23660FF700D57D3E /* SGuardTests.xctest */,
+				97420EA723660FF700D57D3E /* SGuardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97420E8823660FF400D57D3E /* SGuard */ = {
+			isa = PBXGroup;
+			children = (
+				97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */,
+				97420E8923660FF400D57D3E /* AppDelegate.swift */,
+				97420E8B23660FF400D57D3E /* SceneDelegate.swift */,
+				97420E8D23660FF400D57D3E /* ViewController.swift */,
+				97420E8F23660FF400D57D3E /* Main.storyboard */,
+				97420E9223660FF700D57D3E /* Assets.xcassets */,
+				97420E9423660FF700D57D3E /* LaunchScreen.storyboard */,
+				97420E9723660FF700D57D3E /* Info.plist */,
+				97F62E152367752D0086B82B /* Register.swift */,
+				97F62E1723677F270086B82B /* registerSchema.swift */,
+			);
+			path = SGuard;
+			sourceTree = "<group>";
+		};
+		97420E9F23660FF700D57D3E /* SGuardTests */ = {
+			isa = PBXGroup;
+			children = (
+				97420EA023660FF700D57D3E /* SGuardTests.swift */,
+				97420EA223660FF700D57D3E /* Info.plist */,
+			);
+			path = SGuardTests;
+			sourceTree = "<group>";
+		};
+		97420EAA23660FF700D57D3E /* SGuardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				97420EAB23660FF700D57D3E /* SGuardUITests.swift */,
+				97420EAD23660FF700D57D3E /* Info.plist */,
+			);
+			path = SGuardUITests;
+			sourceTree = "<group>";
+		};
+		ED96486CBC484FEDE8C1EBE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96F35193F5AB9959225A019B /* Pods_SGuard.framework */,
+				041ECE4261678D03BAFE61C1 /* Pods_SGuard_SGuardUITests.framework */,
+				A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97420E8523660FF400D57D3E /* SGuard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97420EB023660FF700D57D3E /* Build configuration list for PBXNativeTarget "SGuard" */;
+			buildPhases = (
+				52B6826BC20B6DA208C37A30 /* [CP] Check Pods Manifest.lock */,
+				97420E8223660FF400D57D3E /* Sources */,
+				97420E8323660FF400D57D3E /* Frameworks */,
+				97420E8423660FF400D57D3E /* Resources */,
+				1F35ECCE19CF4AE75113D996 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGuard;
+			productName = SGuard;
+			productReference = 97420E8623660FF400D57D3E /* SGuard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97420E9B23660FF700D57D3E /* SGuardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97420EB323660FF700D57D3E /* Build configuration list for PBXNativeTarget "SGuardTests" */;
+			buildPhases = (
+				437C2CA5D9DA708826B6D670 /* [CP] Check Pods Manifest.lock */,
+				97420E9823660FF700D57D3E /* Sources */,
+				97420E9923660FF700D57D3E /* Frameworks */,
+				97420E9A23660FF700D57D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97420E9E23660FF700D57D3E /* PBXTargetDependency */,
+			);
+			name = SGuardTests;
+			productName = SGuardTests;
+			productReference = 97420E9C23660FF700D57D3E /* SGuardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		97420EA623660FF700D57D3E /* SGuardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97420EB623660FF700D57D3E /* Build configuration list for PBXNativeTarget "SGuardUITests" */;
+			buildPhases = (
+				3844D0A0E28B6D52711AF769 /* [CP] Check Pods Manifest.lock */,
+				97420EA323660FF700D57D3E /* Sources */,
+				97420EA423660FF700D57D3E /* Frameworks */,
+				97420EA523660FF700D57D3E /* Resources */,
+				A9ADAB5B9C763B054B77C6D2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97420EA923660FF700D57D3E /* PBXTargetDependency */,
+			);
+			name = SGuardUITests;
+			productName = SGuardUITests;
+			productReference = 97420EA723660FF700D57D3E /* SGuardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97420E7E23660FF400D57D3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Kham Tran";
+				TargetAttributes = {
+					97420E8523660FF400D57D3E = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					97420E9B23660FF700D57D3E = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 97420E8523660FF400D57D3E;
+					};
+					97420EA623660FF700D57D3E = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 97420E8523660FF400D57D3E;
+					};
+				};
+			};
+			buildConfigurationList = 97420E8123660FF400D57D3E /* Build configuration list for PBXProject "SGuard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97420E7D23660FF400D57D3E;
+			productRefGroup = 97420E8723660FF400D57D3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97420E8523660FF400D57D3E /* SGuard */,
+				97420E9B23660FF700D57D3E /* SGuardTests */,
+				97420EA623660FF700D57D3E /* SGuardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97420E8423660FF400D57D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97420E9623660FF700D57D3E /* LaunchScreen.storyboard in Resources */,
+				97420EBC23664A2A00D57D3E /* GoogleService-Info.plist in Resources */,
+				97420E9323660FF700D57D3E /* Assets.xcassets in Resources */,
+				97420E9123660FF400D57D3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97420E9A23660FF700D57D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97420EA523660FF700D57D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F35ECCE19CF4AE75113D996 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGuard/Pods-SGuard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGuard/Pods-SGuard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SGuard/Pods-SGuard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3844D0A0E28B6D52711AF769 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SGuard-SGuardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		437C2CA5D9DA708826B6D670 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SGuardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52B6826BC20B6DA208C37A30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SGuard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9ADAB5B9C763B054B77C6D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97420E8223660FF400D57D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97F62E1823677F270086B82B /* registerSchema.swift in Sources */,
+				97420E8E23660FF400D57D3E /* ViewController.swift in Sources */,
+				97420E8A23660FF400D57D3E /* AppDelegate.swift in Sources */,
+				97F62E162367752D0086B82B /* Register.swift in Sources */,
+				97420E8C23660FF400D57D3E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97420E9823660FF700D57D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97420EA123660FF700D57D3E /* SGuardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97420EA323660FF700D57D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97420EAC23660FF700D57D3E /* SGuardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97420E9E23660FF700D57D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97420E8523660FF400D57D3E /* SGuard */;
+			targetProxy = 97420E9D23660FF700D57D3E /* PBXContainerItemProxy */;
+		};
+		97420EA923660FF700D57D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97420E8523660FF400D57D3E /* SGuard */;
+			targetProxy = 97420EA823660FF700D57D3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97420E8F23660FF400D57D3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97420E9023660FF400D57D3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97420E9423660FF700D57D3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97420E9523660FF700D57D3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97420EAE23660FF700D57D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		97420EAF23660FF700D57D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97420EB123660FF700D57D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67680CDD8810EF30FE4AC50A /* Pods-SGuard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SGuard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = khamtran.137.SGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97420EB223660FF700D57D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06235FC4ABED66490E5463E1 /* Pods-SGuard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SGuard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = khamtran.137.SGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97420EB423660FF700D57D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9D054CC2DD508BBD9E375F /* Pods-SGuardTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SGuardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = khamtran.SGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SGuard.app/SGuard";
+			};
+			name = Debug;
+		};
+		97420EB523660FF700D57D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF9371A3E0923BFBD4D36765 /* Pods-SGuardTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SGuardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = khamtran.SGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SGuard.app/SGuard";
+			};
+			name = Release;
+		};
+		97420EB723660FF700D57D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D18EC8958B36A8DD43C593DF /* Pods-SGuard-SGuardUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SGuardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = khamtran.SGuardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SGuard;
+			};
+			name = Debug;
+		};
+		97420EB823660FF700D57D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1E809DA12D072842ACFDD8 /* Pods-SGuard-SGuardUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SGuardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = khamtran.SGuardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SGuard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97420E8123660FF400D57D3E /* Build configuration list for PBXProject "SGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97420EAE23660FF700D57D3E /* Debug */,
+				97420EAF23660FF700D57D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97420EB023660FF700D57D3E /* Build configuration list for PBXNativeTarget "SGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97420EB123660FF700D57D3E /* Debug */,
+				97420EB223660FF700D57D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97420EB323660FF700D57D3E /* Build configuration list for PBXNativeTarget "SGuardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97420EB423660FF700D57D3E /* Debug */,
+				97420EB523660FF700D57D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97420EB623660FF700D57D3E /* Build configuration list for PBXNativeTarget "SGuardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97420EB723660FF700D57D3E /* Debug */,
+				97420EB823660FF700D57D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97420E7E23660FF400D57D3E /* Project object */;
+}

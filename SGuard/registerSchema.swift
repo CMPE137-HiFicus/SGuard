@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import FirebaseDatabase
+class registerSchema{
+    var ref:DatabaseReference
+    init() {
+        ref = Database.database().reference()
+    }
+    
+    func checkUser(){
+        
+    }
+}
