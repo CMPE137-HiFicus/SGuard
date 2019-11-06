@@ -7,23 +7,29 @@
 //
 
 import UIKit
-import Firebase
-
-class ViewController: UIViewController {
+import FirebaseAuth
+import FirebaseDatabase
+class HomePage: UIViewController {
     
+    private let currentUser = Auth.auth()
     @IBOutlet private weak var password: UITextField!
     @IBOutlet private weak var status: UILabel!
     @IBOutlet private weak var email: UITextField!
     @IBOutlet private weak var login: UIButton!
      private var Domain = "@SGuard.com"
+    var ref:DatabaseReference = Database.database().reference()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         Auth.auth().addStateDidChangeListener{user,error in}
+    
     }
-   
+    func segueLink(){
+            performSegue(withIdentifier: "contact", sender: self)
+    }
     @IBAction func login(_ sender: Any) {
        let user = email.text
         let pass = password.text!
@@ -33,14 +39,41 @@ class ViewController: UIViewController {
         }
         else {
         let fullEmail = user! + Domain
-        Auth.auth().signIn(withEmail: fullEmail, password: pass) {authresult ,error in
+        
+            self.currentUser.signIn(withEmail: fullEmail, password: pass) {authresult ,error in
             if let e = error{
                 self.status.text = "login fail"
             }
             else {
                 self.status.text = "Login success"
+                self.segueLink()
+               
+              }
             }
-            }}
+        }
+        
+    }
+
+    @IBAction func SignOut(_ sender: Any) {
+        do { try self.currentUser.signOut()}
+        catch let signoutError as NSError{
+            print("Error signing out", signoutError)
+        }
+        
+    }
+    
+    
+    
+  
+    @IBSegueAction func swipre(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
+        return UIViewController(coder: coder)
+    }
+    
+   
+    @IBAction func SwipeUp(_ sender: UISwipeGestureRecognizer) {
+//        sender.direction = UISwipeGestureRecognizer.Direction.down
+        
+        	
     }
     
 }
