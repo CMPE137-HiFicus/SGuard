@@ -10,19 +10,25 @@ import Foundation
 import FirebaseFirestore
 class User{
     private var ref = Firestore.firestore()
-    private var Username:String
-    private var Request:Any
-    private var Notification:Any
-    private var Friendlist:Any
+    private var username:String = ""
+    private var Request:NSArray = []
+    private var Notification:NSArray = []
+    private var Friendlist:NSArray = []
     init(Username:String) {
-        self.Username = Username
-        Request = ""
-        Notification = ""
-        Friendlist = ""
+        
+        self.ref.collection("user").document(Username ).addSnapshotListener{
+            (documentSnapshot , error)  in
+            guard let doc = documentSnapshot else {
+            print("Error fetching document: \(error!)")
+            return
+            }
+            self.username = doc.get("username") as! String
+            self.Request = doc.get("Request") as! NSArray
+            
+            self.Notification = doc.get("Notification") as! NSArray
+            
+        }
+        
     }
-    
-    func getUserInformation(){
-       
-    }
-    
+
 }

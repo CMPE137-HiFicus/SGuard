@@ -65,13 +65,14 @@ class Register: UIViewController {
                                 "Friend list": [],
                                 "Notification":[]]
                             
-                           	 self.db.collection("user").document(self.Uid.currentUser?.uid ?? user ?? "default").setData(doc){err in
+                           	 self.db.collection("user").document(user ?? "default").setData(doc){err in
                                 if let err = err {
                                     print("ERRoR")
                                 }
                                 else{
                                     print("SUCCESS")
                                 }
+                                    
                             }
                             self.linkProfile()
                         }
