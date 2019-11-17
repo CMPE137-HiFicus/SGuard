@@ -15,12 +15,12 @@ class Profile: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        label.text = user.getUsername()
-        self.ref.collection("user").document("GraceTo").addSnapshotListener { doc , error in
+        self.ref.collection("user").document(HomePage.name).addSnapshotListener { doc , error in
             guard let document = doc else{
                 print("Error fleching data: \(error!)")
                 return
             }
-            self.Username.text = document.get("Username") as! String?	
+            self.Username.text = document.get("Username") as! String?
             }
         }
     

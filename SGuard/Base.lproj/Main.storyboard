@@ -97,7 +97,7 @@
                         <outlet property="login" destination="s6g-ba-77v" id="eLc-62-bVf"/>
                         <outlet property="password" destination="Ao3-wu-xyM" id="vX2-x4-XYs"/>
                         <outlet property="status" destination="ClD-3e-4iv" id="rSn-dP-WRA"/>
-                        <segue destination="ze5-vZ-Kax" kind="presentation" identifier="home" id="CKw-5Q-kTw"/>
+                        <segue destination="ze5-vZ-Kax" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="CKw-5Q-kTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -176,7 +176,7 @@
             <objects>
                 <viewController id="FDB-Qa-WfR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1n4-fi-2JQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeC-JR-LHm">
@@ -201,7 +201,7 @@
             <objects>
                 <viewController id="i9L-uK-dkQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rcl-wF-YvG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="j7q-eR-nXQ"/>
@@ -217,7 +217,7 @@
             <objects>
                 <viewController id="Ge5-GT-RQA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CJq-ty-Jtv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="w0J-5x-q5B"/>
@@ -233,7 +233,7 @@
             <objects>
                 <viewController id="U3N-8Z-yMF" customClass="Profile" customModule="SGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJB-5F-tUe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5el-9z-g69">
