@@ -28,7 +28,7 @@ class HomePage: UIViewController {
     
     }
     func segueLink(){
-            performSegue(withIdentifier: "contact", sender: self)
+            performSegue(withIdentifier: "home", sender: self)
     }
     @IBAction func login(_ sender: Any) {
        let user = email.text
@@ -54,18 +54,14 @@ class HomePage: UIViewController {
         }
         
     }
-
-    @IBAction func SignOut(_ sender: Any) {
+    @IBAction func logout(_ sender: Any) {
         do { try self.currentUser.signOut()}
         catch let signoutError as NSError{
             print("Error signing out", signoutError)
         }
-        
     }
     
     
-    
-  
     @IBSegueAction func swipre(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
         return UIViewController(coder: coder)
     }

@@ -13,10 +13,10 @@ class Profile: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     private var ref = Firestore.firestore()
-    private var user = User(Username: "khamtran")
+//    private var user = User(Username: "khamtran")
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = user.getUsername()
+//        label.text = user.getUsername()
         }
         // Do any additional setup after loading the view.
         

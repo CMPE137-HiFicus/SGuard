@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4218AB4BAE9D760BDCA191F0 /* Pods_SGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F35193F5AB9959225A019B /* Pods_SGuard.framework */; };
-		970FB8052373358F0095608D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FB8042373358F0095608D /* User.swift */; };
 		970FB80723735B860095608D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FB80623735B860095608D /* Contact.swift */; };
 		97420E8A23660FF400D57D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420E8923660FF400D57D3E /* AppDelegate.swift */; };
 		97420E8C23660FF400D57D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420E8B23660FF400D57D3E /* SceneDelegate.swift */; };
@@ -49,7 +48,6 @@
 		67680CDD8810EF30FE4AC50A /* Pods-SGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard.debug.xcconfig"; path = "Target Support Files/Pods-SGuard/Pods-SGuard.debug.xcconfig"; sourceTree = "<group>"; };
 		8D1E809DA12D072842ACFDD8 /* Pods-SGuard-SGuardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard-SGuardUITests.release.xcconfig"; path = "Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96F35193F5AB9959225A019B /* Pods_SGuard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGuard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		970FB8042373358F0095608D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		970FB80623735B860095608D /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		97420E8623660FF400D57D3E /* SGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97420E8923660FF400D57D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				97420E9723660FF700D57D3E /* Info.plist */,
 				97F62E152367752D0086B82B /* Register.swift */,
 				97A9AB9F236FB34300A414F0 /* Profile.swift */,
-				970FB8042373358F0095608D /* User.swift */,
 				970FB80623735B860095608D /* Contact.swift */,
 			);
 			path = SGuard;
@@ -425,7 +422,6 @@
 			files = (
 				97A9ABA0236FB34300A414F0 /* Profile.swift in Sources */,
 				97420E8E23660FF400D57D3E /* HomePage.swift in Sources */,
-				970FB8052373358F0095608D /* User.swift in Sources */,
 				97420E8A23660FF400D57D3E /* AppDelegate.swift in Sources */,
 				97F62E162367752D0086B82B /* Register.swift in Sources */,
 				97420E8C23660FF400D57D3E /* SceneDelegate.swift in Sources */,
