@@ -10,29 +10,19 @@ import UIKit
 import FirebaseFirestore
 class Profile: UIViewController {
   
+
     @IBOutlet weak var label: UILabel!
     private var ref = Firestore.firestore()
+    private var user = User(Username: "khamtran")
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        ref.collection("user").document("G1MOvDx6vPTsRjhe7J50iLf1UM03")
-            .addSnapshotListener { documentSnapshot, error in
-                guard let document = documentSnapshot else {
-                    print("Error fetching document: \(error!)")
-                    return
-                }
-                let s = document.get("Friend list")
-            
-               
+        label.text = user.getUsername()
         }
         // Do any additional setup after loading the view.
         
-    }
     
-    @IBAction func trigger(_ sender: Any) {
-      
-        
-    }
+    
+   
     /*
     // MARK: - Navigation
 

@@ -13,22 +13,29 @@ class User{
     private var username:String = ""
     private var Request:NSArray = []
     private var Notification:NSArray = []
-    private var Friendlist:NSArray = []
+    private var Friendlist:CollectionReference
     init(Username:String) {
         
-        self.ref.collection("user").document(Username ).addSnapshotListener{
+        self.Friendlist = self.ref.collection("user").document(Username ).collection("FriendList")
+         self.ref.collection("user").document(Username ).addSnapshotListener{
             (documentSnapshot , error)  in
             guard let doc = documentSnapshot else {
             print("Error fetching document: \(error!)")
             return
             }
-            self.username = doc.get("username") as! String
-            self.Request = doc.get("Request") as! NSArray
+            self.username = doc.get("Username") as! String
+            self.Request = doc.get("Requests") as! NSArray
             
             self.Notification = doc.get("Notification") as! NSArray
             
         }
-        
     }
+    
+    
+    func getUsername() -> String {
+        return self.username
+    }
+    
+    
 
 }
