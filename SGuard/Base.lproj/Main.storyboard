@@ -194,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0P2-vA-bUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="1590"/>
+            <point key="canvasLocation" x="-197" y="1602"/>
         </scene>
         <!--Message-->
         <scene sceneID="baP-sQ-Jzi">
@@ -231,13 +231,13 @@
         <!--Profile-->
         <scene sceneID="eCs-1Q-TQG">
             <objects>
-                <viewController id="U3N-8Z-yMF" sceneMemberID="viewController">
+                <viewController id="U3N-8Z-yMF" customClass="Profile" customModule="SGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJB-5F-tUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcomeeee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5el-9z-g69">
-                                <rect key="frame" x="131" y="347" width="152" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5el-9z-g69">
+                                <rect key="frame" x="103" y="20" width="209" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -248,10 +248,13 @@
                         <viewLayoutGuide key="safeArea" id="aNd-jL-eSg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="JAn-7G-6Q6"/>
+                    <connections>
+                        <outlet property="Username" destination="5el-9z-g69" id="JSv-LM-ezf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug9-Bh-Rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="942"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="941.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xda-fM-Chx">
