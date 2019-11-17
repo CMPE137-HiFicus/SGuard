@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
-class Profile: UITableViewController {
+class Profile: UIViewController {
     @IBOutlet weak var Username: UILabel!
     private var ref = Firestore.firestore()
 //    private var user = User(Username: "khamtran")
@@ -25,4 +25,4 @@ class Profile: UITableViewController {
         }
     
 
-}	
+}
