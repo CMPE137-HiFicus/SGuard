@@ -21,6 +21,7 @@ class Register: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UI_Util.setGradientGreenBlue(uiView: self.view)
     }
     /*
     // MARK: - Navigation
