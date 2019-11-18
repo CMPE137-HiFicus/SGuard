@@ -183,22 +183,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeC-JR-LHm">
-                                <rect key="frame" x="131" y="273" width="75" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-cd-qfP">
+                                <rect key="frame" x="50" y="290" width="314" height="252"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-qT-Ecc">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="54"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Low">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-UX-6TB">
+                                        <rect key="frame" x="0.0" y="99" width="314" height="54"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Moderate">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLz-uQ-MF5">
+                                        <rect key="frame" x="0.0" y="198" width="314" height="54"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Extreme">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=regular" baselineRelativeArrangement="NO"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5kt-cd-qfP" firstAttribute="leading" secondItem="1n4-fi-2JQ" secondAttribute="leading" constant="50" id="3TU-fh-aQK"/>
+                            <constraint firstAttribute="trailing" secondItem="5kt-cd-qfP" secondAttribute="trailing" constant="50" id="MlE-Au-2Bd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yDh-ls-kzH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="nRJ-m7-fdX"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" id="nRJ-m7-fdX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0P2-vA-bUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="1602"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="1601.7857142857142"/>
         </scene>
         <!--Message-->
         <scene sceneID="baP-sQ-Jzi">
@@ -210,11 +237,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="j7q-eR-nXQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Message" id="fi9-dA-Sf5"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="chat" id="fi9-dA-Sf5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHA-dj-fL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303" y="2302"/>
+            <point key="canvasLocation" x="-2800" y="942"/>
         </scene>
         <!--Contact-->
         <scene sceneID="1vm-Y7-cB9">
@@ -226,11 +253,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="w0J-5x-q5B"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact" id="NPO-8P-O8O"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="contact" id="NPO-8P-O8O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmJ-fM-1fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="2238"/>
+            <point key="canvasLocation" x="-2800" y="1602"/>
         </scene>
         <!--Profile-->
         <scene sceneID="eCs-1Q-TQG">
@@ -314,7 +341,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="aNd-jL-eSg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="JAn-7G-6Q6"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" largeContentSizeImage="user" id="JAn-7G-6Q6"/>
                     <connections>
                         <outlet property="Username" destination="5el-9z-g69" id="JSv-LM-ezf"/>
                     </connections>
@@ -341,10 +368,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnU-77-rIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1484" y="1316"/>
+            <point key="canvasLocation" x="-1484" y="1288"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chat" width="25" height="25"/>
+        <image name="contact" width="25" height="25"/>
+        <image name="house" width="25" height="25"/>
         <image name="logo" width="592" height="444"/>
+        <image name="user" width="25" height="25"/>
     </resources>
 </document>
