@@ -9,28 +9,20 @@
 import UIKit
 import FirebaseFirestore
 class Profile: UIViewController {
-  
-
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var Username: UILabel!
     private var ref = Firestore.firestore()
 //    private var user = User(Username: "khamtran")
     override func viewDidLoad() {
         super.viewDidLoad()
 //        label.text = user.getUsername()
+        self.ref.collection("user").document(HomePage.name).addSnapshotListener { doc , error in
+            guard let document = doc else{
+                print("Error fleching data: \(error!)")
+                return
+            }
+            self.Username.text = document.get("Username") as! String?
+            }
         }
-        // Do any additional setup after loading the view.
-        
     
-    
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

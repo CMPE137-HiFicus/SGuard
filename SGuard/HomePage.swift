@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 class HomePage: UIViewController {
-//    private static var user = User(Username: "")
+    static var name:String = ""
     private let currentUser = Auth.auth()
     @IBOutlet private weak var password: UITextField!
     @IBOutlet private weak var status: UILabel!
@@ -28,6 +28,7 @@ class HomePage: UIViewController {
     
     }
     func segueLink(){
+            HomePage.name = email.text!
             performSegue(withIdentifier: "home", sender: self)
     }
     @IBAction func login(_ sender: Any) {
@@ -46,7 +47,7 @@ class HomePage: UIViewController {
             }
             else {
                 self.status.text = "Login success"
-//                HomePage.user = User(Username: self.currentUser.currentUser!.uid)
+
                 self.segueLink()
                
               }
