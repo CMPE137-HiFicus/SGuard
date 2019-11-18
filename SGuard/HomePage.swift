@@ -25,6 +25,7 @@ class HomePage: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         Auth.auth().addStateDidChangeListener{user,error in}
+        UI_Util.setGradientGreenBlue(uiView: self.view)
     
     }
     func segueLink(){
