@@ -35,7 +35,7 @@ class HomePage: UIViewController {
             doc , err in
             if let document = doc{
                 Profile.list = document.get("Requests") as! [String]
-//                Contact.ContactList = document.get("Friendlist") as! [String]
+               Contact.ContactList = document.get("Friendlist") as! [String]
                 Profile.name = HomePage.name
                 self.performSegue(withIdentifier: "home", sender: self)
             }else{

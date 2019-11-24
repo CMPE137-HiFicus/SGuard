@@ -63,7 +63,7 @@ class Register: UIViewController {
                             let doc:[String:Any] = [
                                 "Username":user ?? "default",
                                 "Requests":[],
-                                "Friend list": [],
+                                "Friendlist": [],
                                 "Notification":[]]
                             
                            	 self.db.collection("user").document(user ?? "default").setData(doc){err in

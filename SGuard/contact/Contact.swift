@@ -7,26 +7,35 @@
 //
 
 import UIKit
-
+import FirebaseFirestore
 class Contact: UIViewController,UITableViewDataSource  {
+    let ref = Firestore.firestore().collection("user")
     static var ContactList:[String] = []
     @IBOutlet weak var contact: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         contact.dataSource = self
     }
-
+    
+    @IBAction func unfriend(_ sender: UIButton) {
+        let index = contact.indexPath(for: sender.superview?.superview as! UITableViewCell)
+        ref.document(Contact.ContactList[index!.row]).updateData(["Friendlist":FieldValue.arrayRemove([HomePage.name])])
+            
+        ref.document(HomePage.name).updateData(["Friendlist":FieldValue.arrayRemove([Contact.ContactList[index!.row]])])
+        contact.beginUpdates()
+        contact.deleteRows(at: [index!], with: .automatic)
+        contact.endUpdates()
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Contact.ContactList.count
-      }
-
-      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let request = Contact.ContactList[indexPath.row]
-
-          let requestcell = tableView.dequeueReusableCell(withIdentifier: "contact") as! ContactCell
-        requestcell.name.text = request
-          return requestcell
-      }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let contactfriend = Contact.ContactList[indexPath.row]
+        let contactcell = tableView.dequeueReusableCell(withIdentifier: "contact") as! ContactCell
+        contactcell.name.text = contactfriend
+        return contactcell
+    }
 }
