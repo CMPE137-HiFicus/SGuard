@@ -14,6 +14,7 @@ class Contact: UIViewController,UITableViewDataSource  {
     @IBOutlet weak var contact: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        contact.reloadData()
         contact.dataSource = self
     }
     
