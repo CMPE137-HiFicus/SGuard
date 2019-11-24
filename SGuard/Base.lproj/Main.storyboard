@@ -37,7 +37,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomePage" customModule="SGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClD-3e-4iv">
@@ -157,7 +157,6 @@
                                 </state>
                                 <connections>
                                     <action selector="register:" destination="4Ao-K0-QEL" eventType="touchUpInside" id="jZ5-m8-qw9"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="GFG-JS-wLI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -184,8 +183,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-cd-qfP">
-                                <rect key="frame" x="50" y="274" width="314" height="252"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-cd-qfP">
+                                <rect key="frame" x="50" y="290" width="314" height="252"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-qT-Ecc">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="54"/>
@@ -214,19 +213,11 @@
                                 </subviews>
                                 <variation key="heightClass=regular" baselineRelativeArrangement="NO"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbw-1A-eCU">
-                                <rect key="frame" x="312" y="74" width="82" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="〈Help〉"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5kt-cd-qfP" firstAttribute="leading" secondItem="1n4-fi-2JQ" secondAttribute="leading" constant="50" id="3TU-fh-aQK"/>
-                            <constraint firstItem="Xbw-1A-eCU" firstAttribute="top" secondItem="yDh-ls-kzH" secondAttribute="top" constant="30" id="GUc-7f-hZ8"/>
                             <constraint firstAttribute="trailing" secondItem="5kt-cd-qfP" secondAttribute="trailing" constant="50" id="MlE-Au-2Bd"/>
-                            <constraint firstItem="5kt-cd-qfP" firstAttribute="top" secondItem="yDh-ls-kzH" secondAttribute="top" constant="230" id="kax-Nl-T4b"/>
-                            <constraint firstItem="yDh-ls-kzH" firstAttribute="trailing" secondItem="Xbw-1A-eCU" secondAttribute="trailing" constant="20" id="y7R-UN-Jgy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yDh-ls-kzH"/>
                     </view>
@@ -272,18 +263,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-Yy-q30">
-                                                    <rect key="frame" x="0.0" y="5" width="291" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTc-pq-alF">
-                                                    <rect key="frame" x="299" y="11" width="75" height="37"/>
+                                                    <rect key="frame" x="279" y="5" width="86" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.69266432519999999" blue="0.98138409849999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <state key="normal" title="Unfriend">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -371,17 +355,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2F-oc-bjh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="46"/>
+                                                    <rect key="frame" x="20" y="0.0" width="219" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4D-t7-DOK">
-                                                    <rect key="frame" x="326" y="5" width="48" height="33"/>
+                                                    <rect key="frame" x="308" y="0.0" width="66" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Deny">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -390,10 +374,10 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-ye-rOg">
-                                                    <rect key="frame" x="261" y="5" width="62" height="33"/>
+                                                    <rect key="frame" x="239" y="0.0" width="70" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Accept">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
