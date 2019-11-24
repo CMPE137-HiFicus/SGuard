@@ -20,11 +20,11 @@ class Contact: UIViewController,UITableViewDataSource  {
     @IBAction func unfriend(_ sender: UIButton) {
         let index = contact.indexPath(for: sender.superview?.superview as! UITableViewCell)
         ref.document(Contact.ContactList[index!.row]).updateData(["Friendlist":FieldValue.arrayRemove([HomePage.name])])
-            
         ref.document(HomePage.name).updateData(["Friendlist":FieldValue.arrayRemove([Contact.ContactList[index!.row]])])
-        contact.beginUpdates()
-        contact.deleteRows(at: [index!], with: .automatic)
-        contact.endUpdates()
+            Contact.ContactList.remove(at: index!.row)
+            contact.beginUpdates()
+            contact.deleteRows(at: [index!], with: .automatic)
+            contact.endUpdates()
     }
     
     
