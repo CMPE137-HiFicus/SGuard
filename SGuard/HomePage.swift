@@ -68,12 +68,14 @@ class HomePage: UIViewController {
         }
         
     }
-    @IBAction func logout(_ sender: Any) {
+
+        
+    @IBAction func signout(_ sender: Any) {
         do { try self.currentUser.signOut()}
         catch let signoutError as NSError{
             print("Error signing out", signoutError)
         }
     }
-        
+    
 }
 
