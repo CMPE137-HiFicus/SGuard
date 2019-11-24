@@ -14,10 +14,15 @@ class Profile: UIViewController, UITableViewDataSource {
     static var name:String = ""
     static var list:[String] = []
     private var ref = Firestore.firestore()
+    var refresher:UIRefreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         TableView.dataSource = self
         Username.text = Profile.name
+        
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refesh")
+        refresher.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
+        TableView.addSubview(refresher)
         }
     func updateRequest(indexpath:String){
         ref.collection("user").document(indexpath).updateData(["Friendlist":FieldValue.arrayUnion([HomePage.name])])
@@ -25,10 +30,12 @@ class Profile: UIViewController, UITableViewDataSource {
         ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
     }
     
-    @IBAction func reloadTable(_ sender: Any) {
+   
+    @objc func refresh()
+    {
+        refresher.endRefreshing()
         TableView.reloadData()
     }
-    
     
     @IBAction func acceptRequest(_ sender: UIButton) {
         let indexpath =	TableView.indexPath(for: sender.superview?.superview as! UITableViewCell)!
@@ -43,7 +50,7 @@ class Profile: UIViewController, UITableViewDataSource {
     
     @IBAction func dennyRequest(_ sender:UITableViewCell) {
         let indexpath =    TableView.indexPath(for: sender.superview?.superview as! UITableViewCell)!
-        ref.collection("user").document(Profile.list.remove(at: indexpath.row)).updateData(["Friendlist":FieldValue.arrayUnion([HomePage.name])])
+        ref.collection("user").document(Profile.list.remove(at: indexpath.row)).updateData(["Friendlist":FieldValue.arrayRemove([HomePage.name])])
         ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
         Profile.list.remove(at: indexpath.row)
         TableView.beginUpdates()
