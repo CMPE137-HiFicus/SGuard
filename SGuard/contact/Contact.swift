@@ -12,13 +12,21 @@ class Contact: UIViewController,UITableViewDataSource  {
     let ref = Firestore.firestore().collection("user")
     static var ContactList:[String] = []
     @IBOutlet weak var contact: UITableView!
+     var refresher:UIRefreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         contact.reloadData()
         contact.dataSource = self
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refesh")
+        refresher.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
+        contact.addSubview(refresher)
     }
     
-    
+    @objc func refresh()
+       {
+           refresher.endRefreshing()
+           contact.reloadData()
+       }
     @IBAction func unfriend(_ sender: UIButton) {
         let index = contact.indexPath(for: sender.superview?.superview as! UITableViewCell)
         ref.document(Contact.ContactList[index!.row]).updateData(["Friendlist":FieldValue.arrayRemove([HomePage.name])])
