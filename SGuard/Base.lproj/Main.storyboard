@@ -411,7 +411,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="aNd-jL-eSg"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dou-eZ-Dsn" appends="YES" id="nAc-yL-xNm"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="user" largeContentSizeImage="user" id="JAn-7G-6Q6"/>
                     <connections>
@@ -421,6 +425,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug9-Bh-Rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Dou-eZ-Dsn">
+                    <connections>
+                        <action selector="reloadTable:" destination="U3N-8Z-yMF" id="OdZ-4u-1Sx"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="941.51785714285711"/>
         </scene>

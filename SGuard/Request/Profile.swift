@@ -25,6 +25,9 @@ class Profile: UIViewController, UITableViewDataSource {
         ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
     }
     
+    @IBAction func reloadTable(_ sender: Any) {
+        TableView.reloadData()
+    }
     
     
     @IBAction func acceptRequest(_ sender: UIButton) {
@@ -39,8 +42,10 @@ class Profile: UIViewController, UITableViewDataSource {
     
     
     @IBAction func dennyRequest(_ sender:UITableViewCell) {
-         let indexpath =    TableView.indexPath(for: sender.superview?.superview as! UITableViewCell)!
-   ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
+        let indexpath =    TableView.indexPath(for: sender.superview?.superview as! UITableViewCell)!
+        ref.collection("user").document(Profile.list.remove(at: indexpath.row)).updateData(["Friendlist":FieldValue.arrayUnion([HomePage.name])])
+        ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
+        Profile.list.remove(at: indexpath.row)
         TableView.beginUpdates()
         TableView.deleteRows(at: [indexpath], with: .automatic)
         TableView.endUpdates()

@@ -17,6 +17,7 @@ class Contact: UIViewController,UITableViewDataSource  {
         contact.dataSource = self
     }
     
+    
     @IBAction func unfriend(_ sender: UIButton) {
         let index = contact.indexPath(for: sender.superview?.superview as! UITableViewCell)
         ref.document(Contact.ContactList[index!.row]).updateData(["Friendlist":FieldValue.arrayRemove([HomePage.name])])
