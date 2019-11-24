@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseDatabase
+import FirebaseFirestore
 class HomePage: UIViewController {
     static var name:String = ""
     private let currentUser = Auth.auth()
@@ -17,7 +17,7 @@ class HomePage: UIViewController {
     @IBOutlet private weak var email: UITextField!
     @IBOutlet private weak var login: UIButton!
      private var Domain = "@SGuard.com"
-    var ref:DatabaseReference = Database.database().reference()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,20 @@ class HomePage: UIViewController {
     
     }
     func segueLink(){
-            HomePage.name = email.text!
-            performSegue(withIdentifier: "home", sender: self)
+        HomePage.name = email.text!
+        let ref = Firestore.firestore()
+        ref.collection("user").document(HomePage.name).addSnapshotListener{
+            doc , err in
+            if let document = doc{
+                Profile.list = document.get("Requests") as! [String]
+//                Contact.ContactList = document.get("Friendlist") as! [String]
+                Profile.name = HomePage.name
+                self.performSegue(withIdentifier: "home", sender: self)
+            }else{
+                print("Doc does not exist")
+            }
+        }
+           
     }
     @IBAction func login(_ sender: Any) {
        let user = email.text
@@ -48,7 +60,7 @@ class HomePage: UIViewController {
             }
             else {
                 self.status.text = "Login success"
-
+                
                 self.segueLink()
                
               }
@@ -62,18 +74,6 @@ class HomePage: UIViewController {
             print("Error signing out", signoutError)
         }
     }
-    
-    
-    @IBSegueAction func swipre(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
-        return UIViewController(coder: coder)
-    }
-    
-   
-    @IBAction func SwipeUp(_ sender: UISwipeGestureRecognizer) {
-//        sender.direction = UISwipeGestureRecognizer.Direction.down
         
-        	
-    }
-    
 }
 

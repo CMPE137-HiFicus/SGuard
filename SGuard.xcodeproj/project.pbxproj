@@ -20,6 +20,7 @@
 		97420EAC23660FF700D57D3E /* SGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97420EAB23660FF700D57D3E /* SGuardUITests.swift */; };
 		97420EBC23664A2A00D57D3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */; };
 		97A9ABA0236FB34300A414F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9AB9F236FB34300A414F0 /* Profile.swift */; };
+		97F62959238AF1B900C7A39D /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F62958238AF1B900C7A39D /* ContactCell.swift */; };
 		97F62E162367752D0086B82B /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F62E152367752D0086B82B /* Register.swift */; };
 		C0C8CB6723821A5600013EF3 /* UI_Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8CB6623821A5600013EF3 /* UI_Util.swift */; };
 		E5E92F8298ED3EB8A4F41ABD /* Pods_SGuard_SGuardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041ECE4261678D03BAFE61C1 /* Pods_SGuard_SGuardUITests.framework */; };
@@ -68,6 +69,7 @@
 		97420EAD23660FF700D57D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97A9AB9F236FB34300A414F0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		97F62958238AF1B900C7A39D /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		97F62E152367752D0086B82B /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGuardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C8CB6623821A5600013EF3 /* UI_Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_Util.swift; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 		97420E8823660FF400D57D3E /* SGuard */ = {
 			isa = PBXGroup;
 			children = (
+				97F62957238AED4A00C7A39D /* contact */,
+				97F62956238AECA600C7A39D /* Request */,
 				97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */,
 				97420E8923660FF400D57D3E /* AppDelegate.swift */,
 				97420E8B23660FF400D57D3E /* SceneDelegate.swift */,
@@ -150,9 +154,6 @@
 				97420E9423660FF700D57D3E /* LaunchScreen.storyboard */,
 				97420E9723660FF700D57D3E /* Info.plist */,
 				97F62E152367752D0086B82B /* Register.swift */,
-				97A9AB9F236FB34300A414F0 /* Profile.swift */,
-				970FB80623735B860095608D /* Contact.swift */,
-				97021F2A238209C2001ADB6C /* RequestTableViewCell.swift */,
 				C0C8CB6623821A5600013EF3 /* UI_Util.swift */,
 			);
 			path = SGuard;
@@ -174,6 +175,24 @@
 				97420EAD23660FF700D57D3E /* Info.plist */,
 			);
 			path = SGuardUITests;
+			sourceTree = "<group>";
+		};
+		97F62956238AECA600C7A39D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				97021F2A238209C2001ADB6C /* RequestTableViewCell.swift */,
+				97A9AB9F236FB34300A414F0 /* Profile.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		97F62957238AED4A00C7A39D /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				970FB80623735B860095608D /* Contact.swift */,
+				97F62958238AF1B900C7A39D /* ContactCell.swift */,
+			);
+			path = contact;
 			sourceTree = "<group>";
 		};
 		ED96486CBC484FEDE8C1EBE9 /* Frameworks */ = {
@@ -426,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F62959238AF1B900C7A39D /* ContactCell.swift in Sources */,
 				97A9ABA0236FB34300A414F0 /* Profile.swift in Sources */,
 				97021F2B238209C2001ADB6C /* RequestTableViewCell.swift in Sources */,
 				97420E8E23660FF400D57D3E /* HomePage.swift in Sources */,

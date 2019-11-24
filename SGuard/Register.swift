@@ -75,7 +75,7 @@ class Register: UIViewController {
                                 }
                                     
                             }
-                            self.linkProfile()
+                         
                         }
                     }
                 }
