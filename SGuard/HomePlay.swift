@@ -20,13 +20,15 @@ class HomePlay: UIViewController {
         // Do any additional setup after loading the view.
         
         // sound  
-        let sound1 = Bundle.main.path(forResource: "S1.mp3", ofType:nil)
-        let sound2 = Bundle.main.path(forResource: "S2.mp3", ofType:nil)
+        let sound1 = Bundle.main.path(forResource: "S3.mp3", ofType:nil)
+        let sound2 = Bundle.main.path(forResource: "S4.mp3", ofType:nil)
         
         do {
             // initialize it
             audio1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound1!))
+            audio1.numberOfLoops = 100
             audio2 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound2!))
+            audio2.numberOfLoops = 100
         } catch {
             // It will print any
             print(error)
