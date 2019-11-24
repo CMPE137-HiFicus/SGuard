@@ -179,7 +179,7 @@
         <!--Home-->
         <scene sceneID="YNj-B7-6wy">
             <objects>
-                <viewController id="FDB-Qa-WfR" sceneMemberID="viewController">
+                <viewController id="FDB-Qa-WfR" customClass="HomePlay" customModule="SGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1n4-fi-2JQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,6 +194,10 @@
                                         <state key="normal" title="Low">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="play_sound1:" destination="RsG-QN-vGq" eventType="touchUpInside" id="VeX-pl-6NT"/>
+                                            <action selector="play_sound1:" destination="FDB-Qa-WfR" eventType="touchUpInside" id="c2v-XC-awm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-UX-6TB">
                                         <rect key="frame" x="0.0" y="99" width="314" height="54"/>
@@ -202,6 +206,9 @@
                                         <state key="normal" title="Moderate">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="play_sound2:" destination="FDB-Qa-WfR" eventType="touchUpInside" id="xdh-eP-ThF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLz-uQ-MF5">
                                         <rect key="frame" x="0.0" y="198" width="314" height="54"/>
@@ -210,6 +217,9 @@
                                         <state key="normal" title="Extreme">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="play_sound3:" destination="FDB-Qa-WfR" eventType="touchUpInside" id="3qu-IT-dgz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=regular" baselineRelativeArrangement="NO"/>
@@ -233,6 +243,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" id="nRJ-m7-fdX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0P2-vA-bUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RsG-QN-vGq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="1601.7857142857142"/>
         </scene>
