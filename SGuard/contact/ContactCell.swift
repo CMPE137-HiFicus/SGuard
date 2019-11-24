@@ -12,5 +12,6 @@ class ContactCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     
+    
 
 }
