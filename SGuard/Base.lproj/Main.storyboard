@@ -183,8 +183,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-cd-qfP">
-                                <rect key="frame" x="50" y="290" width="314" height="252"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-cd-qfP">
+                                <rect key="frame" x="50" y="274" width="314" height="252"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-qT-Ecc">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="54"/>
@@ -213,10 +213,18 @@
                                 </subviews>
                                 <variation key="heightClass=regular" baselineRelativeArrangement="NO"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-0Z-obt">
+                                <rect key="frame" x="312" y="74" width="82" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="〈Help〉"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5kt-cd-qfP" firstAttribute="leading" secondItem="1n4-fi-2JQ" secondAttribute="leading" constant="50" id="3TU-fh-aQK"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5a-0Z-obt" secondAttribute="trailing" constant="20" id="6uI-rV-YMD"/>
+                            <constraint firstItem="5kt-cd-qfP" firstAttribute="top" secondItem="1n4-fi-2JQ" secondAttribute="topMargin" constant="230" id="CVw-eg-BSe"/>
+                            <constraint firstItem="Q5a-0Z-obt" firstAttribute="top" secondItem="yDh-ls-kzH" secondAttribute="top" constant="30" id="K7z-ea-Ebt"/>
                             <constraint firstAttribute="trailing" secondItem="5kt-cd-qfP" secondAttribute="trailing" constant="50" id="MlE-Au-2Bd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yDh-ls-kzH"/>
