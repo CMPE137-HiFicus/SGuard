@@ -22,6 +22,10 @@
 		97A9ABA0236FB34300A414F0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A9AB9F236FB34300A414F0 /* Profile.swift */; };
 		97F62959238AF1B900C7A39D /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F62958238AF1B900C7A39D /* ContactCell.swift */; };
 		97F62E162367752D0086B82B /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F62E152367752D0086B82B /* Register.swift */; };
+		C0813654238B2F0400918B90 /* S1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0813653238B2F0400918B90 /* S1.mp3 */; };
+		C0813656238B2F0C00918B90 /* S2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0813655238B2F0C00918B90 /* S2.mp3 */; };
+		C0813658238B334900918B90 /* HomePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0813657238B334900918B90 /* HomePlay.swift */; };
+		C081365A238B33D900918B90 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0813659238B33D900918B90 /* AVFoundation.framework */; };
 		C0C8CB6723821A5600013EF3 /* UI_Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8CB6623821A5600013EF3 /* UI_Util.swift */; };
 		E5E92F8298ED3EB8A4F41ABD /* Pods_SGuard_SGuardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041ECE4261678D03BAFE61C1 /* Pods_SGuard_SGuardUITests.framework */; };
 		F7B69127EE750B1E7D9BE0AB /* Pods_SGuardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */; };
@@ -72,6 +76,10 @@
 		97F62958238AF1B900C7A39D /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		97F62E152367752D0086B82B /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGuardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0813653238B2F0400918B90 /* S1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = S1.mp3; sourceTree = "<group>"; };
+		C0813655238B2F0C00918B90 /* S2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = S2.mp3; sourceTree = "<group>"; };
+		C0813657238B334900918B90 /* HomePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlay.swift; sourceTree = "<group>"; };
+		C0813659238B33D900918B90 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C0C8CB6623821A5600013EF3 /* UI_Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_Util.swift; sourceTree = "<group>"; };
 		D18EC8958B36A8DD43C593DF /* Pods-SGuard-SGuardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuard-SGuardUITests.debug.xcconfig"; path = "Target Support Files/Pods-SGuard-SGuardUITests/Pods-SGuard-SGuardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF9371A3E0923BFBD4D36765 /* Pods-SGuardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGuardTests.release.xcconfig"; path = "Target Support Files/Pods-SGuardTests/Pods-SGuardTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C081365A238B33D900918B90 /* AVFoundation.framework in Frameworks */,
 				4218AB4BAE9D760BDCA191F0 /* Pods_SGuard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +152,7 @@
 		97420E8823660FF400D57D3E /* SGuard */ = {
 			isa = PBXGroup;
 			children = (
+				C0813652238B2EBA00918B90 /* Sounds */,
 				97F62957238AED4A00C7A39D /* contact */,
 				97F62956238AECA600C7A39D /* Request */,
 				97420EBB23664A2A00D57D3E /* GoogleService-Info.plist */,
@@ -155,6 +165,7 @@
 				97420E9723660FF700D57D3E /* Info.plist */,
 				97F62E152367752D0086B82B /* Register.swift */,
 				C0C8CB6623821A5600013EF3 /* UI_Util.swift */,
+				C0813657238B334900918B90 /* HomePlay.swift */,
 			);
 			path = SGuard;
 			sourceTree = "<group>";
@@ -195,9 +206,19 @@
 			path = contact;
 			sourceTree = "<group>";
 		};
+		C0813652238B2EBA00918B90 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C0813653238B2F0400918B90 /* S1.mp3 */,
+				C0813655238B2F0C00918B90 /* S2.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		ED96486CBC484FEDE8C1EBE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0813659238B33D900918B90 /* AVFoundation.framework */,
 				96F35193F5AB9959225A019B /* Pods_SGuard.framework */,
 				041ECE4261678D03BAFE61C1 /* Pods_SGuard_SGuardUITests.framework */,
 				A486F56025C54CF8A256F643 /* Pods_SGuardTests.framework */,
@@ -314,6 +335,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0813654238B2F0400918B90 /* S1.mp3 in Resources */,
+				C0813656238B2F0C00918B90 /* S2.mp3 in Resources */,
 				97420E9623660FF700D57D3E /* LaunchScreen.storyboard in Resources */,
 				97420EBC23664A2A00D57D3E /* GoogleService-Info.plist in Resources */,
 				97420E9323660FF700D57D3E /* Assets.xcassets in Resources */,
@@ -449,6 +472,7 @@
 				97A9ABA0236FB34300A414F0 /* Profile.swift in Sources */,
 				97021F2B238209C2001ADB6C /* RequestTableViewCell.swift in Sources */,
 				97420E8E23660FF400D57D3E /* HomePage.swift in Sources */,
+				C0813658238B334900918B90 /* HomePlay.swift in Sources */,
 				C0C8CB6723821A5600013EF3 /* UI_Util.swift in Sources */,
 				97420E8A23660FF400D57D3E /* AppDelegate.swift in Sources */,
 				97F62E162367752D0086B82B /* Register.swift in Sources */,
