@@ -61,7 +61,15 @@ class Profile: UIViewController, UITableViewDataSource {
     @IBOutlet weak var Request: UITextField!
     
     @IBAction func sendRequest(_ sender: Any) {
-        ref.collection("user").document(Request.text!).updateData(["Requests":FieldValue.arrayUnion([HomePage.name])])
+        let name = Request.text!
+        for friend in Contact.ContactList{
+            if !friend.elementsEqual(name){
+                ref.collection("user").document(Request.text!).updateData(["Requests":FieldValue.arrayUnion([HomePage.name])])
+            }
+            else {
+                Request.text = "Already in contact"
+            }
+        }
     }
     
     
