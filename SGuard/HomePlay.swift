@@ -8,9 +8,13 @@
 
 import UIKit
 import AVFoundation
-
-class HomePlay: UIViewController {
-    
+import MapKit
+import CoreLocation
+import FirebaseFirestore
+class HomePlay: UIViewController, CLLocationManagerDelegate {
+    private var ref = Firestore.firestore()
+    private var location:CLLocation = CLLocation()
+    let locationManager = CLLocationManager()
     var audio1: AVAudioPlayer!
     var audio2: AVAudioPlayer!
     var count = 0;
@@ -18,7 +22,10 @@ class HomePlay: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         // sound  
         let sound1 = Bundle.main.path(forResource: "S3.mp3", ofType:nil)
         let sound2 = Bundle.main.path(forResource: "S4.mp3", ofType:nil)
@@ -34,6 +41,11 @@ class HomePlay: UIViewController {
             print(error)
         }
         
+    }
+    
+    func encode(latitude:CLLocationDegrees, longtitude:CLLocationDegrees)-> String{
+        
+        return HomePage.name + ":" + String(latitude) + ":" + String(longtitude)
     }
     
     @IBAction func play_sound1(_ sender: Any) {
@@ -61,12 +73,22 @@ class HomePlay: UIViewController {
             audio1.play()
             audio2.play()
             count+=1
+            let slocation = encode(latitude: (location.coordinate.latitude), longtitude: (location.coordinate.longitude))
+            
+            for s in Contact.ContactList{
+            ref.collection("user").document(s).updateData(["Notification":FieldValue.arrayUnion([slocation])])
+                print(String(location.coordinate.latitude) + "," + String(location.coordinate.longitude))
+            }
         } else {
             audio1.stop()
             audio2.stop()
             count = 0
         }
+        
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.location = locations.last! as CLLocation
+      }
 
 }
