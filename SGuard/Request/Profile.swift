@@ -28,6 +28,7 @@ class Profile: UIViewController, UITableViewDataSource {
         ref.collection("user").document(indexpath).updateData(["Friendlist":FieldValue.arrayUnion([HomePage.name])])
         ref.collection("user").document(HomePage.name).updateData(["Friendlist":FieldValue.arrayUnion([indexpath])])
         ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
+        
     }
     
    
@@ -50,8 +51,7 @@ class Profile: UIViewController, UITableViewDataSource {
     
     @IBAction func dennyRequest(_ sender:UITableViewCell) {
         let indexpath =    TableView.indexPath(for: sender.superview?.superview as! UITableViewCell)!
-        ref.collection("user").document(Profile.list.remove(at: indexpath.row)).updateData(["Friendlist":FieldValue.arrayRemove([HomePage.name])])
-        ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([indexpath])])
+    ref.collection("user").document(HomePage.name).updateData(["Requests":FieldValue.arrayRemove([Profile.list[indexpath.row]])])
         Profile.list.remove(at: indexpath.row)
         TableView.beginUpdates()
         TableView.deleteRows(at: [indexpath], with: .automatic)
@@ -59,16 +59,35 @@ class Profile: UIViewController, UITableViewDataSource {
     }
     
     @IBOutlet weak var Request: UITextField!
-    
+    func send(name:String){
+ref.collection("user").document(name).updateData(["Requests":FieldValue.arrayUnion([HomePage.name])]){
+            erro in
+            if let err = erro{
+                let alert = UIAlertController(title: "Alert", message: "Not Found User", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+            }else{
+                let alert = UIAlertController(title: "Alert", message: "Request is sent", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+            }
+        }
+    }
     @IBAction func sendRequest(_ sender: Any) {
         let name = Request.text!
+        if !Contact.ContactList.isEmpty {
         for friend in Contact.ContactList{
             if !friend.elementsEqual(name){
-                ref.collection("user").document(Request.text!).updateData(["Requests":FieldValue.arrayUnion([HomePage.name])])
+                send(name: name)
             }
             else {
-                Request.text = "Already in contact"
+                let alert = UIAlertController(title: "Alert", message: "User is already in contact list", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
             }
+            }}
+        else{
+           send(name: name)
         }
     }
     
