@@ -26,6 +26,7 @@ class HomePlay: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
         // sound  
         let sound1 = Bundle.main.path(forResource: "S3.mp3", ofType:nil)
         let sound2 = Bundle.main.path(forResource: "S4.mp3", ofType:nil)

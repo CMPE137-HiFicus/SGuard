@@ -15,9 +15,8 @@ class Contact: UIViewController,UITableViewDataSource  {
      var refresher:UIRefreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
-        contact.reloadData()
         contact.dataSource = self
-        refresher.attributedTitle = NSAttributedString(string: "Pull to refesh")
+        refresher.attributedTitle = NSAttributedString(string: "Refeshing")
         refresher.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
         contact.addSubview(refresher)
     }

@@ -13,12 +13,34 @@ class MessegeViewController: UIViewController,UITableViewDataSource {
    
     @IBOutlet weak var messegeTable: UITableView!
     static var NoticeList:[String] = []
+    var size = 0
+    var refresher:UIRefreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+       
+            messegeTable.reloadData()
+            refresher.attributedTitle = NSAttributedString(string: "Refeshing")
+            refresher.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
+        messegeTable.addSubview(refresher)
         messegeTable.dataSource = self
+       
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if size != MessegeViewController.NoticeList.count{
+            refresher.beginRefreshing()
+            refresh()
+            size = MessegeViewController.NoticeList.count
+        }
+    }
+
+    @objc func refresh()
+    {
+        refresher.endRefreshing()
+        messegeTable.reloadData()
+    }
+    
     func decode(messege:String) ->[String.SubSequence]{
         return messege.split(separator: ":", maxSplits: 2, omittingEmptySubsequences: true)
     }

@@ -34,6 +34,7 @@ class HomePage: UIViewController {
         ref.collection("user").document(HomePage.name).addSnapshotListener{
             doc , err in
             if let document = doc{
+                var size = 0
                 Profile.list = document.get("Requests") as! [String]
                 Contact.ContactList = document.get("Friendlist") as! [String]
                 Profile.name = HomePage.name
