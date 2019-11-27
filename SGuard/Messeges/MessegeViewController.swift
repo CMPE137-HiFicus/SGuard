@@ -9,13 +9,14 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseFirestore
 class MessegeViewController: UIViewController,UITableViewDataSource {
-   
+  
     @IBOutlet weak var messegeTable: UITableView!
     static var NoticeList:[String] = []
     var size = 0
     var refresher:UIRefreshControl = UIRefreshControl()
-    
+    private var ref = Firestore.firestore().collection("user")
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -28,17 +29,18 @@ class MessegeViewController: UIViewController,UITableViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+  
         if size != MessegeViewController.NoticeList.count{
-            refresher.beginRefreshing()
+           
             refresh()
+           
             size = MessegeViewController.NoticeList.count
         }
     }
-
-    @objc func refresh()
-    {
-        refresher.endRefreshing()
+    @objc func refresh(){
+        refresher.beginRefreshing()
         messegeTable.reloadData()
+        refresher.endRefreshing()
     }
     
     func decode(messege:String) ->[String.SubSequence]{
@@ -66,5 +68,17 @@ class MessegeViewController: UIViewController,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            ref.document(HomePage.name).updateData(["Notification":FieldValue.arrayRemove([MessegeViewController.NoticeList[indexPath.row]])])
+                
+            MessegeViewController.NoticeList.remove(at: indexPath.row)
+            messegeTable.beginUpdates()
+            messegeTable.deleteRows(at: [indexPath], with: .automatic)
+            messegeTable.endUpdates()
+            
+                
+        }
+    }
 
 }
