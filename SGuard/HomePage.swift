@@ -77,6 +77,9 @@ class HomePage: UIViewController {
             print("Error signing out", signoutError)
         }
     }
+    @IBAction func quickaccess(_ sender: Any) {
+        performSegue(withIdentifier: "quick", sender: self)
+    }
     
 }
 
