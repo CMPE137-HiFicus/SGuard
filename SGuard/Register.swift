@@ -51,13 +51,14 @@ class Register: UIViewController {
         {   let fullEmail = user! + Domain
            Uid.createUser(withEmail: fullEmail, password: pass!){Authresult, err in
                 if let err = err{
-                    print("Registing ERROR")
+                    self.labelOf.text = "User already exist"
                 }
                 else{
                     self.Uid.signIn(withEmail: fullEmail, password: pass!){
                         authresult, err in
                         if let err = err{
                             print("ERROR")
+                            
                         }
                         else{
                             let doc:[String:Any] = [
@@ -65,17 +66,8 @@ class Register: UIViewController {
                                 "Requests":[],
                                 "Friendlist": [],
                                 "Notification":[]]
-                            
-                           	 self.db.collection("user").document(user ?? "default").setData(doc){err in
-                                if let err = err {
-                                    print("ERRoR")
-                                }
-                                else{
-                                    print("SUCCESS")
-                                }
-                                    
-                            }
-                         
+                            self.db.collection("user").document(user ?? "default").setData(doc)
+                         self.labelOf.text = "Register success"
                         }
                     }
                 }
