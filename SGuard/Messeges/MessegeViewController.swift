@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseFirestore
 class MessegeViewController: UIViewController,UITableViewDataSource {
-   
+    private var ref = Firestore.firestore().collection("user")
     @IBOutlet weak var messegeTable: UITableView!
     static var NoticeList:[String] = []
     override func viewDidLoad() {
@@ -44,5 +45,16 @@ class MessegeViewController: UIViewController,UITableViewDataSource {
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+         if editingStyle == .delete{
+             ref.document(HomePage.name).updateData(["Notification":FieldValue.arrayRemove([MessegeViewController.NoticeList[indexPath.row]])])
+                 
+             MessegeViewController.NoticeList.remove(at: indexPath.row)
+             messegeTable.beginUpdates()
+             messegeTable.deleteRows(at: [indexPath], with: .automatic)
+             messegeTable.endUpdates()
+             
+                 
+         }
+     }
 }
